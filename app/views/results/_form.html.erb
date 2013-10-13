@@ -1,0 +1,32 @@
+<%= form_for @result do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :test_id %><br />
+    <%= f.text_field :test_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :no_correct %><br />
+    <%= f.text_field :no_correct %>
+  </p>
+  <p>
+    <%= f.label :no_incorrect %><br />
+    <%= f.text_field :no_incorrect %>
+  </p>
+  <p>
+    <%= f.label :no_unanswered %><br />
+    <%= f.text_field :no_unanswered %>
+  </p>
+  <p>
+    <%= f.label :score %><br />
+    <%= f.text_field :score %>
+  </p>
+  <p>
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

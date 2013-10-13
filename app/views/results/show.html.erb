@@ -1,0 +1,36 @@
+<% title "Result" %>
+
+<p>
+  <strong>Test:</strong>
+  <%= @result.test_id %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @result.user_id %>
+</p>
+<p>
+  <strong>No Correct:</strong>
+  <%= @result.no_correct %>
+</p>
+<p>
+  <strong>No Incorrect:</strong>
+  <%= @result.no_incorrect %>
+</p>
+<p>
+  <strong>No Unanswered:</strong>
+  <%= @result.no_unanswered %>
+</p>
+<p>
+  <strong>Score:</strong>
+  <%= @result.score %>
+</p>
+<p>
+  <strong>Rank:</strong>
+  <%= @result.rank %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_result_path(@result) %> |
+  <%= link_to "Destroy", @result, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", results_path %>
+</p>

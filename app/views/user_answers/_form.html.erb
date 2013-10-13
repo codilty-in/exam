@@ -1,0 +1,16 @@
+<%= form_for @user_answer do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :test_question_id %><br />
+    <%= f.text_field :test_question_id %>
+  </p>
+  <p>
+    <%= f.label :answer_id %><br />
+    <%= f.text_field :answer_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

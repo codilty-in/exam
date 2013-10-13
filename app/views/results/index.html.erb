@@ -1,0 +1,29 @@
+<% title "Results" %>
+
+<table>
+  <tr>
+    <th>Test</th>
+    <th>User</th>
+    <th>No Correct</th>
+    <th>No Incorrect</th>
+    <th>No Unanswered</th>
+    <th>Score</th>
+    <th>Rank</th>
+  </tr>
+  <% for result in @results %>
+    <tr>
+      <td><%= result.test_id %></td>
+      <td><%= result.user_id %></td>
+      <td><%= result.no_correct %></td>
+      <td><%= result.no_incorrect %></td>
+      <td><%= result.no_unanswered %></td>
+      <td><%= result.score %></td>
+      <td><%= result.rank %></td>
+      <td><%= link_to "Show", result %></td>
+      <td><%= link_to "Edit", edit_result_path(result) %></td>
+      <td><%= link_to "Destroy", result, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Result", new_result_path %></p>

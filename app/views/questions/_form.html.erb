@@ -1,0 +1,22 @@
+<%= form_for @question do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :test_question_id %><br />
+    <%= f.text_field :test_question_id %>
+  </p>
+  <p>
+    <%= f.label :question %><br />
+    <%= f.text_field :question %>
+  </p>
+  <p>
+    <%= f.fields_for :answers do |builder| %>
+        <%= builder.label :answer %>
+	<%= builder.text_field :answer %>
+       <% unless builder.object.new_record? %>
+        <%= builder.check_box '_destroy' %>
+	<%= builder.label '_destroy', 'Remove' %>
+       <% end %>
+    <% end %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

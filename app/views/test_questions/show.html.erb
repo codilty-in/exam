@@ -1,0 +1,22 @@
+<% title "Test Question" %>
+
+<p>
+  <strong>Test:</strong>
+  <%= @test_question.test_id %>
+</p>
+<p>
+  <strong>Questions</strong>
+<p>
+<p>
+  <ol>
+  <% @test_question.questions.each do |q| %>
+	<li><%= link_to q.question, question_path(q) %></li>
+  <% end %>
+  </ol>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_test_question_path(@test_question) %> |
+  <%= link_to "Destroy", @test_question, data: { confirm: 'Are you sure?' }, :method => :delete %> |
+  <%= link_to "View All", test_questions_path %>
+</p>

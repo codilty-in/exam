@@ -1,0 +1,3 @@
+class Question < ActiveRecord::Base
+  attr_accessible :test_question_id, :question
+end

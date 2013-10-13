@@ -1,0 +1,29 @@
+<% title "Test" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @test.name %>
+</p>
+<p>
+  <strong>Test Questions</strong>
+<p>
+<p>
+  <ol>
+  <% @test.test_questions.each do |q| %>
+	<ol><% q.questions.each do |qs| %>
+	    <li><%= qs.question %></li>
+		<ol><% qs.answers.each do |a| %>
+			<li><%= a.answer %></li>
+		    <% end %>
+		</ol>
+	    <% end %>
+	</ol>
+
+  <% end %>
+  </ol>
+</p>
+<p>
+  <%= link_to "Edit", edit_test_path(@test) %> |
+  <%= link_to "Destroy", @test, data: { confirm: 'Are you sure?' }, :method => :delete %> |
+  <%= link_to "View All", tests_path %>
+</p>

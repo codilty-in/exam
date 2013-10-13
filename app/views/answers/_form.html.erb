@@ -1,0 +1,17 @@
+<%= form_for @answer do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :question_id %><br />
+    <%= f.text_field :question_id %>
+  </p>
+  <p>
+    <%= f.label :answer %><br />
+    <%= f.text_field :answer %>
+  </p>
+  <p>
+    <%= f.label :correct? %><br />
+    <%= f.radio_button :is_correct, "true" %><label>yes</label>
+    <%= f.radio_button :is_correct, "false" %><label>no</label>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

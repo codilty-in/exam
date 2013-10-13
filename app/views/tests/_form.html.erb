@@ -1,0 +1,12 @@
+<%= form_for @test do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :no_of_questions %><br />
+    <%= f.text_field :no_of_questions %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
